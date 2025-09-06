@@ -22,10 +22,14 @@ class _RichTextExampleState extends State<RichTextExample> {
     return Scaffold(
       body: Column(
         children: [
-          TextField(
-            focusNode: focusNode,
-            controller: controller,
-            onChanged: (value) {},
+          Expanded(
+            child: TextField(
+              focusNode: focusNode,
+              controller: controller,
+              onChanged: (value) {},
+              maxLines: null,
+              expands: true,
+            ),
           ),
           const Gap(5),
           RichTextEditUI(controller: controller, focusNode: focusNode),
